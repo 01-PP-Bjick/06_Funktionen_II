@@ -7,7 +7,7 @@
 
 1. Dateneingabe + -überprüfung :
 2. Auswahl Rechenart :
-3. Fkt. Grundrechenarten :
+3. Fkt. Grundrechenarten : check!
 4. Ausgabe in Konsole : check!
 */
 
