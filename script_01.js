@@ -13,6 +13,38 @@
 
 // Konstanten
 const ERROR_STR_DIV = "Division durch 0 nicht möglich!";
+const ERROR_STR_GEN = "Irgendetwas ging schief!"
+
+// modul: calculator | tests:
+// module: check operator | Test:
+// agreement : "+","-","*","/"
+output(calculator(2, 3, "+"));
+output(calculator(3, 2, "-"));
+output(calculator(2, 3, "*"));
+output(calculator(4, 2, "/"));
+output(calculator(4, 2, ":"));
+output(calculator(4, 0, "/"));
+output(calculator(4, 0, ":"));
+output(calculator(4, 2, "ads"));
+function calculator(a, b, op) {
+
+	switch (op) {
+		case "+":	// addition
+			return "Ergebnis Addition";
+		case "-":	// subtraktion
+			return "Ergebnis Subtraktion";
+		case "*":	// multiplikation
+			return "Ergebnis Multiplikation";
+		case "/":	// division
+		case ":":	// division
+			return "Ergebnis Division";
+		default:
+			return ERROR_STR_GEN;
+	}
+
+
+}
+
 
 // module: addition a + b |  test:
 // output(add(2, 3));
@@ -39,9 +71,9 @@ function multi(a, b) {
 }
 
 // module: division a / b |  test:
-output(div(6, 6));
-output(div(10, -2));
-output(div(8, 0));
+// output(div(6, 6));
+// output(div(10, -2));
+// output(div(8, 0));
 function div(a, b) {
 	if (b == 0) {
 		return ERROR_STR_DIV;
