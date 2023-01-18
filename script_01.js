@@ -15,19 +15,30 @@
 const ERROR_STR_DIV = "Division durch 0 nicht möglich!";
 const ERROR_STR_GEN = "Irgendetwas ging schief!"
 
-startApp();
+// startApp();
 function startApp() {
 	output(calculator(getNumber1(), getNumber2(), getOp()));
 }
 
 function getNumber1() {
-	return prompt("Zahl1 eingeben:");
+	return Number(prompt("Zahl1 eingeben:"));
 }
+
 function getNumber2() {
-	return prompt("Zahl2 eingeben:");
+	return Number(prompt("Zahl2 eingeben:"));
 }
+
+// module: input operator | Test:
+output(getOp());
 function getOp() {
-	return prompt("Operator eingeben:");
+	
+	let op= prompt("Operator eingeben:")
+
+if (op == "+" || op == "-" || op == "*" || op == "/" || op == ":") {
+	return op;
+} else {
+	return ERROR_STR_GEN;
+}
 }
 
 
