@@ -6,7 +6,7 @@
 0. a+b | a-b | a*b | a/b  --> Ergebnis c 
 
 1. Dateneingabe + -überprüfung :
-2. Auswahl Rechenart :
+2. Auswahl Rechenart : check!
 3. Fkt. Grundrechenarten : check!
 4. Ausgabe in Konsole : check!
 */
@@ -15,17 +15,33 @@
 const ERROR_STR_DIV = "Division durch 0 nicht möglich!";
 const ERROR_STR_GEN = "Irgendetwas ging schief!"
 
+startApp();
+function startApp() {
+	output(calculator(getNumber1(), getNumber2(), getOp()));
+}
+
+function getNumber1() {
+	return prompt("Zahl1 eingeben:");
+}
+function getNumber2() {
+	return prompt("Zahl2 eingeben:");
+}
+function getOp() {
+	return prompt("Operator eingeben:");
+}
+
+
 // modul: calculator | tests:
 // module: check operator | Test:
 // agreement : "+","-","*","/"
-output(calculator(2, 3, "+"));
-output(calculator(3, 2, "-"));
-output(calculator(2, 3, "*"));
-output(calculator(4, 2, "/"));
-output(calculator(4, 2, ":"));
-output(calculator(4, 4, "/"));
-output(calculator(4, 0, ":"));
-output(calculator(4, 2, "ads"));
+// output(calculator(2, 3, "+"));
+// output(calculator(3, 2, "-"));
+// output(calculator(2, 3, "*"));
+// output(calculator(4, 2, "/"));
+// output(calculator(4, 2, ":"));
+// output(calculator(4, 0, "/"));
+// output(calculator(4, 0, ":"));
+// output(calculator(4, 2, "ads"));
 function calculator(a, b, op) {
 
 	switch (op) {
@@ -44,7 +60,6 @@ function calculator(a, b, op) {
 
 
 }
-
 
 // module: addition a + b |  test:
 // output(add(2, 3));
