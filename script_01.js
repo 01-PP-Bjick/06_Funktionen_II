@@ -36,11 +36,15 @@ function multi(a, b) {
 }
 
 // module: division a / b |  test:
-output(div(7, 6));
-output(div(9.5, -15));
+output(div(6, 6));
+output(div(10, -2));
 output(div(8, 0));
 function div(a, b) {
-	return a / b;
+	if (b == 0) {
+		return "Division durch 0 nicht möglich!";
+	} else {
+		return a / b;	
+	}
 }
 
 // module:  output | test:
