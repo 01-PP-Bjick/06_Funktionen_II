@@ -23,21 +23,21 @@ output(calculator(3, 2, "-"));
 output(calculator(2, 3, "*"));
 output(calculator(4, 2, "/"));
 output(calculator(4, 2, ":"));
-output(calculator(4, 0, "/"));
+output(calculator(4, 4, "/"));
 output(calculator(4, 0, ":"));
 output(calculator(4, 2, "ads"));
 function calculator(a, b, op) {
 
 	switch (op) {
 		case "+":	// addition
-			return "Ergebnis Addition";
+			return add(a, b);
 		case "-":	// subtraktion
-			return "Ergebnis Subtraktion";
+			return sub(a, b);
 		case "*":	// multiplikation
-			return "Ergebnis Multiplikation";
+			return multi(a, b);
 		case "/":	// division
 		case ":":	// division
-			return "Ergebnis Division";
+			return div(a, b);
 		default:
 			return ERROR_STR_GEN;
 	}
