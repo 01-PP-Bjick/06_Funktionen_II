@@ -45,9 +45,8 @@ output(div(8, 0));
 function div(a, b) {
 	if (b == 0) {
 		return ERROR_STR_DIV;
-	} else {
-		return a / b;	
 	}
+		return a / b;	
 }
 
 // module:  output | test:
