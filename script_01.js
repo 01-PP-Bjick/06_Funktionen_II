@@ -34,13 +34,19 @@ function getOp() {
 	
 	let op= prompt("Operator eingeben:")
 
-if (op == "+" || op == "-" || op == "*" || op == "/" || op == ":") {
+if (isOpValid(op)) {
 	return op;
 } else {
 	return ERROR_STR_GEN;
 }
 }
 
+// module: operator Valide? | Test:
+// output(isOpValid("+"));
+// output(isOpValid("km.,"));
+function isOpValid(op) {
+	return op == "+" || op == "-" || op == "*" || op == "/" || op == ":"
+}
 
 // modul: calculator | tests:
 // module: check operator | Test:
